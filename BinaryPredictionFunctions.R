@@ -49,22 +49,6 @@ BSpredict_Copula<-function(zdata,t0,xdata1,w_predict,mean_string,FT_string,rho_s
   return(Fw)
 }
 
-######################################################
-#Compute AUC and BS 
-######################################################
-models<-c("Null","Truth","LM2","LM3","LM4","LM2Int","LM3Int","LM4Int","MM","MMCox")
-
-cop_labs<-NULL
-for(mean_string in mods_names) 
-{
-  for(FT_string in c("cox","weib"))
-  {
-    for(rho_string in mods_names) 
-    {
-      cop_labs<-c(cop_labs,paste0(mean_string,"_",FT_string,"_",rho_string))
-    }
-  }
-}
 #######################################################
 #Landmark Models 
 #######################################################
